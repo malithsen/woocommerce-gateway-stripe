@@ -24,6 +24,6 @@ class WC_Stripe_Logger_Test extends WP_UnitTestCase {
 		$stripe_settings['logging'] = 'yes';
 		WC_Stripe_Helper::update_main_stripe_settings( $stripe_settings );
 
-		$this->assertFalse( WC_Stripe_Logger::can_log() );
+		$this->assertTrue( WC_Stripe_Logger::can_log() );
 	}
 }
